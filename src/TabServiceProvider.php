@@ -3,9 +3,7 @@
 namespace Astrotomic\IgnitionStackOverflowTab;
 
 use Facade\Ignition\Ignition;
-use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use Astrotomic\IgnitionStackOverflowTab\Http\Middleware\Authorize;
 
 class TabServiceProvider extends ServiceProvider
 {

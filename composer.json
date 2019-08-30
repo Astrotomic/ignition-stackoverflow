@@ -20,7 +20,7 @@
         "facade/ignition": "^1.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^3.8",
+        "orchestra/testbench": "3.8.*|^4.0",
         "phpunit/phpunit": "^8.0"
     },
     "autoload": {
@@ -43,6 +43,5 @@
     "config": {
         "sort-packages": true
     },
-    "minimum-stability": "dev",
     "prefer-stable": true
 }

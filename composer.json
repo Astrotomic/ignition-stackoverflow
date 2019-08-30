@@ -1,0 +1,48 @@
+{
+    "name": ":vendor/:package_name",
+    "description": ":package_description",
+    "keywords": [
+        "laravel",
+        "flare",
+        "ignition"
+    ],
+    "homepage": "https://github.com/:vendor/:package_name",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": ":author_name",
+            "email": ":author_email",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "facade/ignition": "^1.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.8",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            ":namespace_vendor\\:namespace_tab_name\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            ":namespace_vendor\\:namespace_tab_name\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                ":namespace_vendor\\:namespace_tab_name\\TabServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

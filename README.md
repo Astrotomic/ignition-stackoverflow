@@ -2,10 +2,11 @@
 
 ## A tab that fetches stackoverflow questions
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/astrotomic/ignition-stackoverflow.svg?style=flat-square)](https://packagist.org/packages/astrotomic/ignition-stackoverflow)
-[![Build Status](https://img.shields.io/travis/astrotomic/ignition-stackoverflow/master.svg?style=flat-square)](https://travis-ci.org/astrotomic/ignition-stackoverflow)
-[![Quality Score](https://img.shields.io/scrutinizer/g/astrotomic/ignition-stackoverflow.svg?style=flat-square)](https://scrutinizer-ci.com/g/astrotomic/ignition-stackoverflow)
-[![Total Downloads](https://img.shields.io/packagist/dt/astrotomic/ignition-stackoverflow.svg?style=flat-square)](https://packagist.org/packages/astrotomic/ignition-stackoverflow)
+[![Total Downloads](https://img.shields.io/packagist/dt/astrotomic/ignition-stackoverflow.svg?label=Downloads&style=flat-square&cacheSeconds=600)](https://packagist.org/packages/astrotomic/ignition-stackoverflow) 
+[![TravisCI](https://img.shields.io/travis/Astrotomic/ignition-stackoverflow/master.svg?label=TravisCI&style=flat-square&cacheSeconds=600)](https://travis-ci.org/Astrotomic/ignition-stackoverflow) 
+[![StyleCI](https://styleci.io/repos/205167128/shield)](https://styleci.io/repos/205167128) 
+[![Latest Version](http://img.shields.io/packagist/v/astrotomic/ignition-stackoverflow.svg?label=Release&style=flat-square&cacheSeconds=600)](https://packagist.org/packages/astrotomic/ignition-stackoverflow)
+[![MIT License](https://img.shields.io/github/license/Astrotomic/ignition-stackoverflow.svg?label=License&color=blue&style=flat-square&cacheSeconds=600)](https://github.com/Astrotomic/ignition-stackoverflow/blob/master/LICENSE)
 
 
 This is where your description should go. Try and limit it to a paragraph or two.

@@ -1,17 +1,17 @@
 {
-    "name": ":vendor/:package_name",
-    "description": ":package_description",
+    "name": "astrotomic/ignition-stackoverflow",
+    "description": "A tab that fetches stackoverflow questions",
     "keywords": [
         "laravel",
         "flare",
         "ignition"
     ],
-    "homepage": "https://github.com/:vendor/:package_name",
+    "homepage": "https://github.com/astrotomic/ignition-stackoverflow",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
+            "name": "Tom Witkowski",
+            "email": "dev.gummibeer@gmail.com",
             "role": "Developer"
         }
     ],
@@ -25,18 +25,18 @@
     },
     "autoload": {
         "psr-4": {
-            ":namespace_vendor\\:namespace_tab_name\\": "src/"
+            "Astrotomic\\IgnitionStackOverflowTab\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            ":namespace_vendor\\:namespace_tab_name\\Tests\\": "tests"
+            "Astrotomic\\IgnitionStackOverflowTab\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                ":namespace_vendor\\:namespace_tab_name\\TabServiceProvider"
+                "Astrotomic\\IgnitionStackOverflowTab\\TabServiceProvider"
             ]
         }
     },

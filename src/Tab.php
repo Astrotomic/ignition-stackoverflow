@@ -1,6 +1,6 @@
 <?php
 
-namespace :namespace_vendor\:namespace_tab_name;
+namespace Astrotomic\IgnitionStackOverflowTab;
 
 use Facade\Ignition\Tabs\Tab as BaseTab;
 
@@ -8,17 +8,17 @@ class Tab extends BaseTab
 {
     public function name(): string
     {
-        return ':tab_name';
+        return 'Stack Overflow';
     }
 
     public function component(): string
     {
-        return ':package_name';
+        return 'ignition-stackoverflow';
     }
 
     public function registerAssets()
     {
-        $this->script(':package_name', __DIR__.'/../dist/js/tab.js');
+        $this->script('ignition-stackoverflow', __DIR__.'/../dist/js/tab.js');
     }
 
     public function meta(): array

@@ -1,10 +1,10 @@
 <?php
 
-namespace :namespace_vendor\:namespace_tab_name\Tests;
+namespace Astrotomic\IgnitionStackOverflowTab\Tests;
 
 use Illuminate\Support\Facades\Route;
 use Orchestra\Testbench\TestCase as Orchestra;
-use :namespace_vendor\:namespace_tab_name\TabServiceProvider;
+use Astrotomic\IgnitionStackOverflowTab\TabServiceProvider;
 
 abstract class TestCase extends Orchestra
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace :namespace_vendor\:namespace_tab_name;
+namespace Astrotomic\IgnitionStackOverflowTab;
 
 use Facade\Ignition\Ignition;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
-use :namespace_vendor\:namespace_tab_name\Http\Middleware\Authorize;
+use Astrotomic\IgnitionStackOverflowTab\Http\Middleware\Authorize;
 
 class TabServiceProvider extends ServiceProvider
 {
@@ -16,25 +16,7 @@ class TabServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->app->booted(function () {
-            $this->routes();
-        });
-
         Ignition::tab(app(Tab::class));
-    }
-
-    protected function routes()
-    {
-        if ($this->app->routesAreCached()) {
-            return;
-        }
-
-        if (!config('app.debug')) {
-            return;
-        }
-
-        Route::prefix('ignition-vendor/:vendor/:package_name')
-                ->group(__DIR__.'/../routes/api.php');
     }
 
     /**

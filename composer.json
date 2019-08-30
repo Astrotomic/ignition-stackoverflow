@@ -20,8 +20,18 @@
         "facade/ignition": "^1.0"
     },
     "require-dev": {
-        "orchestra/testbench": "3.8.*|^4.0",
+        "orchestra/testbench": "3.8.* || ^4.0",
         "phpunit/phpunit": "^8.0"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Astrotomic\\IgnitionStackOverflowTab\\TabServiceProvider"
+            ]
+        }
     },
     "autoload": {
         "psr-4": {
@@ -32,16 +42,6 @@
         "psr-4": {
             "Astrotomic\\IgnitionStackOverflowTab\\Tests\\": "tests"
         }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Astrotomic\\IgnitionStackOverflowTab\\TabServiceProvider"
-            ]
-        }
-    },
-    "config": {
-        "sort-packages": true
     },
     "prefer-stable": true
 }

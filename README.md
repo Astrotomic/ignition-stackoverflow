@@ -11,7 +11,7 @@
 
 This is where your description should go. Try and limit it to a paragraph or two.
 
-Add a screenshot of the tab here.
+![StackOverflow Tab](banner.png)
 
 ## Installation
 

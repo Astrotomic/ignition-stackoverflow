@@ -9,13 +9,13 @@
 [![MIT License](https://img.shields.io/github/license/Astrotomic/ignition-stackoverflow.svg?label=License&color=blue&style=flat-square&cacheSeconds=600)](https://github.com/Astrotomic/ignition-stackoverflow/blob/master/LICENSE)
 
 
-This is where your description should go. Try and limit it to a paragraph or two.
+This package adds a tab to your ignition screen which shows matching StackOverflow questions - including a search field.
 
 ![StackOverflow Tab](banner.png)
 
 ## Installation
 
-You can install the package in to a Laravel app that uses [Ignition](https://flareapp.io) via composer:
+You can install the package in to a Laravel app that uses [Ignition](https://github.com/facade/ignition) via composer:
 
 ```bash
 composer require astrotomic/ignition-stackoverflow
@@ -23,11 +23,11 @@ composer require astrotomic/ignition-stackoverflow
 
 ## Usage
 
-Click on the "Stack Overflow" tab on your Ignition screen to see the tool provided by this package.
+Click on the "Stack Overflow" tab on your Ignition screen to see a list of matching StackOverflow questions.
 
 ### Testing
 
-``` bash
+```bash
 composer test
 ```
 

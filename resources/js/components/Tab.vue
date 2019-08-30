@@ -1,6 +1,6 @@
 <template>
     <div class="tab-content">
-        <div class="layout-col">
+        <div class="layout-col py-2">
 
             <input type="search" class="mt-2 mb-2 w-full py-2 px-2 border-b border-tint-400" v-model.trim="query" v-on:change="search" />
 

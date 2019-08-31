@@ -11,7 +11,7 @@
 
 This package adds a tab to your ignition screen which shows matching StackOverflow questions - including a search field.
 
-![StackOverflow Tab](banner.png)
+![StackOverflow Tab](banner.jpg)
 
 ## Installation
 

@@ -16,15 +16,8 @@ class Tab extends BaseTab
         return 'ignition-stackoverflow';
     }
 
-    public function registerAssets()
+    public function registerAssets(): void
     {
-        $this->script('ignition-stackoverflow', __DIR__.'/../dist/js/tab.js');
-    }
-
-    public function meta(): array
-    {
-        return [
-            'title' => $this->name(),
-        ];
+        $this->script($this->component(), __DIR__.'/../dist/js/tab.js');
     }
 }

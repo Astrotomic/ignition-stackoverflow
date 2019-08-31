@@ -4,7 +4,7 @@
 
             <div class="my-2">
                 <div class="flex mb-1">
-                    <input type="search" class="mr-3 p-2 block flex-grow rounded border-b-2 border-gray-400 bg-gray-100 focus:border-orange-500 hover:border-orange-400" v-model.trim="query" v-on:change="search" />
+                    <input type="search" class="mr-3 p-2 block flex-grow rounded border-b-2 border-gray-400 bg-gray-100 focus:border-orange-500 hover:border-orange-400" v-model.trim="query" v-on:change="newSearch" />
 
                     <a :href="url" target="_blank" class="inline-block p-2 rounded border-b-2 border-orange-400 hover:border-orange-800 bg-orange-100 hover:text-white hover:bg-orange-500">
                         <i class="fab fa-stack-overflow mr-1"></i>
@@ -58,6 +58,20 @@
                     </div>
                 </article>
             </section>
+
+            <footer v-if="!is_loading && questions.length" class="flex">
+                <span v-if="page > 1" class="cursor-pointer px-2 py-1 rounded inline-block border border-gray-400 hover:border-orange-500 hover:text-orange-500" v-on:click="prevPage">
+                    <i class="fas fa-angle-double-left"></i>
+                    prev
+                </span>
+                <span class="py-1 text-center flex-grow">
+                    page: {{page}}
+                </span>
+                <span v-if="has_next" class="cursor-pointer px-2 py-1 rounded inline-block border border-gray-400 hover:border-orange-500 hover:text-orange-500" v-on:click="nextPage">
+                    next
+                    <i class="fas fa-angle-double-right"></i>
+                </span>
+            </footer>
         </div>
     </div>
 </template>
@@ -72,6 +86,8 @@
 
         data () {
             return {
+                page: 1,
+                has_next: false,
                 is_loading: false,
                 query: '[laravel]['+this.report.language.toLowerCase()+'] ' + this.report.message,
                 questions: [],
@@ -86,6 +102,22 @@
             }
         },
         methods: {
+            prevPage: function () {
+                if(this.page > 1) {
+                    this.page--;
+                    this.search();
+                }
+            },
+            nextPage: function () {
+                if(this.has_next) {
+                    this.page++;
+                    this.search();
+                }
+            },
+            newSearch: function () {
+                this.page = 1;
+                this.search();
+            },
             search: function () {
                 if(!this.query) {
                     this.questions = [];
@@ -94,10 +126,11 @@
 
                 this.is_loading = true;
                 axios
-                    .get('https://api.stackexchange.com/2.2/search/advanced?page=1&pagesize=10&order=desc&sort=relevance&site=stackoverflow&accepted=True&q='+encodeURIComponent(this.query))
+                    .get('https://api.stackexchange.com/2.2/search/advanced?&pagesize=10&order=desc&sort=relevance&site=stackoverflow&accepted=True&page='+this.page+'&q='+encodeURIComponent(this.query))
                     .then(response => {
                         this.questions = response.data.items;
                         this.is_loading = false;
+                        this.has_next = response.data.has_more;
                     });
             }
         }

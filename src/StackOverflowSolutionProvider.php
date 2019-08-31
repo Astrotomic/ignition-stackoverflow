@@ -25,7 +25,7 @@ class StackOverflowSolutionProvider implements HasSolutionsForThrowable
         curl_close($url);
 
         return [
-            BaseSolution::create("Check Similar Stack Overflow Questions")
+            BaseSolution::create('Check Similar Stack Overflow Questions')
                 ->setSolutionDescription('')
                 ->setDocumentationLinks(
                     collect($questions->items)

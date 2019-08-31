@@ -24,7 +24,7 @@ class StackOverflowSolutionProvider implements HasSolutionsForThrowable
 
         curl_close($url);
 
-        if(! $questions->items) {
+        if (! $questions->items) {
             return [];
         }
 

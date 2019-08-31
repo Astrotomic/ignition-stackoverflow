@@ -5,7 +5,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/astrotomic/ignition-stackoverflow.svg?label=Downloads&style=flat-square&cacheSeconds=600)](https://packagist.org/packages/astrotomic/ignition-stackoverflow) 
 [![TravisCI](https://img.shields.io/travis/Astrotomic/ignition-stackoverflow/master.svg?label=TravisCI&style=flat-square&cacheSeconds=600)](https://travis-ci.org/Astrotomic/ignition-stackoverflow) 
 [![StyleCI](https://styleci.io/repos/205465094/shield)](https://styleci.io/repos/205465094) 
-[![Latest Version](http://img.shields.io/packagist/v/astrotomic/ignition-stackoverflow.svg?label=Release&style=flat-square&cacheSeconds=600)](https://packagist.org/packages/astrotomic/ignition-stackoverflow)
+[![Latest Version](https://img.shields.io/github/v/release/Astrotomic/ignition-stackoverflow?sort=semver&label=Release&style=flat-square&cacheSeconds=600)](https://packagist.org/packages/astrotomic/ignition-stackoverflow)
 [![MIT License](https://img.shields.io/github/license/Astrotomic/ignition-stackoverflow.svg?label=License&color=blue&style=flat-square&cacheSeconds=600)](https://github.com/Astrotomic/ignition-stackoverflow/blob/master/LICENSE)
 
 

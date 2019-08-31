@@ -4,6 +4,7 @@ namespace Astrotomic\IgnitionStackOverflowTab;
 
 use Facade\Ignition\Ignition;
 use Illuminate\Support\ServiceProvider;
+use Facade\IgnitionContracts\SolutionProviderRepository as SolutionProviderRepositoryContract;
 
 class TabServiceProvider extends ServiceProvider
 {
@@ -15,6 +16,8 @@ class TabServiceProvider extends ServiceProvider
     public function boot()
     {
         Ignition::tab(app(Tab::class));
+
+        $this->app->make(SolutionProviderRepositoryContract::class)->registerSolutionProvider(StackOverflowSolutionProvider::class);
     }
 
     /**

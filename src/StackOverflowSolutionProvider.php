@@ -32,11 +32,11 @@ class StackOverflowSolutionProvider implements HasSolutionsForThrowable
         curl_setopt($url, CURLOPT_ENCODING, 'gzip');
         curl_setopt($url, CURLOPT_RETURNTRANSFER, 1);
 
-        $questions = json_decode(curl_exec($url));
+        $questions = json_decode((string) curl_exec($url));
 
         curl_close($url);
 
-        if (! $questions->items) {
+        if (empty($questions) || ! isset($questions->items)) {
             return [];
         }
 

@@ -30,9 +30,9 @@ class StackOverflowSolutionProvider implements HasSolutionsForThrowable
         }
 
         return collect($questions->items)
-                ->map(function($item){
+                ->map(function($item) {
                     return BaseSolution::create(html_entity_decode($item->title, ENT_QUOTES))
-                                        ->setSolutionDescription( Str::words(html_entity_decode($item->body_markdown, ENT_QUOTES), 50))
+                                        ->setSolutionDescription(Str::words(html_entity_decode($item->body_markdown, ENT_QUOTES), 50))
                                         ->setDocumentationLinks(['Link' => $item->link]);
                 })
                 ->toArray();

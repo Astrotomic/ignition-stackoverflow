@@ -16,7 +16,18 @@ class StackOverflowSolutionProvider implements HasSolutionsForThrowable
 
     public function getSolutions(Throwable $throwable): array
     {
-        $url = curl_init('https://api.stackexchange.com/2.2/search/advanced?&pagesize=5&order=desc&sort=relevance&site=stackoverflow&accepted=True&page=1&filter=!9YdnSJ*_T&q='.urlencode($throwable->getMessage()));
+        $query = http_build_query([
+            'page' => 1,
+            'pagesize' => 5,
+            'order' => 'desc',
+            'sort' => 'relevance',
+            'site' => 'stackoverflow',
+            'accepted' => 'True',
+            'filter' => '!9YdnSJ*_T',
+            'q' => urlencode($throwable->getMessage()),
+        ]);
+
+        $url = curl_init('https://api.stackexchange.com/2.2/search/advanced?' . urldecode($query));
 
         curl_setopt($url, CURLOPT_ENCODING, 'gzip');
         curl_setopt($url, CURLOPT_RETURNTRANSFER, 1);

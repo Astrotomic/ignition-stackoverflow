@@ -24,21 +24,20 @@
                 <div v-if="!is_loading && !questions.length" class="text-gray-500 py-2">
                     No questions found for your query "{{this.query}}".
                 </div>
-                <article v-if="!is_loading && questions.length" v-for="question of questions" class="mb-2 p-2 border-l-4 border-gray-400 hover:border-orange-500 rounded bg-gray-100">
+                <article v-if="!is_loading && questions.length" v-for="question of questions" class="mb-2 p-2 border-l-8 border-gray-400 hover:border-orange-500 rounded bg-gray-100">
                     <div class="flex">
                         <div class="flex-grow">
-                            <a :href="question.link" target="_blank" class="block font-medium hover:text-orange-500" v-html="question.title"></a>
+                            <a :href="question.link" target="_blank" class="block hover:text-orange-500">
+                                <h3 v-html="question.title" class="font-bold"></h3>
+                            </a>
+
                             <div class="text-gray-400">
-                                last activity at
-                                <time :datetime="question.last_activity_date|moment('YYYY-MM-DD HH:mm:ss')" class="text-gray-500">
-                                    {{question.last_activity_date|moment('YYYY-MM-DD')}}
-                                </time>
-                                and created by
-                                <a :href="question.owner.link" target="_blank" class="text-gray-500 hover:text-orange-500">
+                                asked by
+                                <a :href="question.owner.link" target="_blank" class="font-semibold text-blue-400 hover:text-blue-500">
                                     {{question.owner.display_name}}
                                 </a>
                                 at
-                                <time :datetime="question.creation_date|moment('YYYY-MM-DD HH:mm:ss')" class="text-gray-500">
+                                <time :datetime="question.creation_date|moment('YYYY-MM-DD HH:mm:ss')" class="font-medium text-gray-500">
                                     {{question.creation_date|moment('YYYY-MM-DD')}}
                                 </time>
                             </div>
@@ -47,13 +46,30 @@
                                 <span v-for="tag of question.tags" class="mr-1 px-1 py-px bg-gray-200 text-gray-500 rounded">{{tag}}</span>
                             </div>
                         </div>
-                        <div class="px-2 pt-2 text-center">
-                            <span class="block text-lg text-gray-500">{{question.score}}</span>
-                            <span class="text-gray-400">score</span>
+                        <div class="ml-2">
+                            <div
+                                class="p-2 text-center border border-transparent"
+                                v-bind:class="{
+                                    'text-gray-400': question.score == 0,
+                                    'text-red-400': question.score < 0,
+                                    'text-gray-500': question.score > 0,
+                                }"
+                            >
+                                <span class="block text-lg">{{question.score}}</span>
+                                <span>votes</span>
+                            </div>
                         </div>
-                        <div class="px-2 pt-2 text-center">
-                            <span class="block text-lg text-gray-500">{{question.answer_count}}</span>
-                            <span class="text-gray-400">answers</span>
+                        <div class="ml-2">
+                            <div
+                                class="p-2 text-center border border-green-400 rounded"
+                                v-bind:class="{
+                                    'text-green-400': !question.is_answered,
+                                    'text-white bg-green-400': question.is_answered,
+                                }"
+                            >
+                                <span class="block text-lg">{{question.answer_count}}</span>
+                                <span>answers</span>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -126,7 +142,7 @@
 
                 this.is_loading = true;
                 axios
-                    .get('https://api.stackexchange.com/2.2/search/advanced?&pagesize=10&order=desc&sort=relevance&site=stackoverflow&accepted=True&page='+this.page+'&q='+encodeURIComponent(this.query))
+                    .get('https://api.stackexchange.com/2.2/search/advanced?&pagesize=10&order=desc&sort=relevance&site=stackoverflow&answers=1&page='+this.page+'&q='+encodeURIComponent(this.query))
                     .then(response => {
                         this.questions = response.data.items;
                         this.is_loading = false;

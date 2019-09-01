@@ -27,7 +27,7 @@ class StackOverflowSolutionProvider implements HasSolutionsForThrowable
             'q' => urlencode($throwable->getMessage()),
         ]);
 
-        $url = curl_init('https://api.stackexchange.com/2.2/search/advanced?' . urldecode($query));
+        $url = curl_init('https://api.stackexchange.com/2.2/search/advanced?'.urldecode($query));
 
         curl_setopt($url, CURLOPT_ENCODING, 'gzip');
         curl_setopt($url, CURLOPT_RETURNTRANSFER, 1);

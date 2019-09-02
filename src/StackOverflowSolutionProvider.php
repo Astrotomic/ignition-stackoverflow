@@ -25,22 +25,22 @@ class StackOverflowSolutionProvider implements HasSolutionsForThrowable
             $questions = $this->getQuestionsByResponse($response);
 
             return array_filter(array_map([$this, 'getSolutionByQuestion'], $questions));
-        } catch(Exception $exception) {
+        } catch (Exception $exception) {
             return [];
         }
     }
 
     protected function getSolutionByQuestion(array $question): ?BaseSolution
     {
-        if(empty($question['title'])) {
+        if (empty($question['title'])) {
             return null;
         }
 
-        if(empty($question['body_markdown'])) {
+        if (empty($question['body_markdown'])) {
             return null;
         }
 
-        if(empty($question['link'])) {
+        if (empty($question['link'])) {
             return null;
         }
 
@@ -50,19 +50,18 @@ class StackOverflowSolutionProvider implements HasSolutionsForThrowable
 
         return BaseSolution::create($title)
             ->setSolutionDescription($description)
-            ->setDocumentationLinks([$title => $link])
-        ;
+            ->setDocumentationLinks([$title => $link]);
     }
 
     protected function getQuestionsByResponse(?string $response): array
     {
-        if($response === null) {
+        if ($response === null) {
             return [];
         }
 
         $data = json_decode($response, true);
 
-        if(json_last_error() !== JSON_ERROR_NONE) {
+        if (json_last_error() !== JSON_ERROR_NONE) {
             return [];
         }
 
@@ -82,7 +81,7 @@ class StackOverflowSolutionProvider implements HasSolutionsForThrowable
 
         curl_close($curl);
 
-        if(empty($response)) {
+        if (empty($response)) {
             return null;
         }
 
@@ -93,7 +92,7 @@ class StackOverflowSolutionProvider implements HasSolutionsForThrowable
     {
         $query = $throwable->getMessage();
 
-        if(empty($query)) {
+        if (empty($query)) {
             $query = get_class($throwable);
         }
 

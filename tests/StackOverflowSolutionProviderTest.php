@@ -2,14 +2,13 @@
 
 namespace Astrotomic\IgnitionStackOverflowTab\Tests;
 
-
-use Astrotomic\IgnitionStackOverflowTab\StackOverflowSolutionProvider;
 use Exception;
+use Throwable;
+use ReflectionClass;
 use Facade\IgnitionContracts\BaseSolution;
 use PHPUnit\Framework\MockObject\MockObject;
-use ReflectionClass;
 use Symfony\Component\Routing\Exception\RouteNotFoundException;
-use Throwable;
+use Astrotomic\IgnitionStackOverflowTab\StackOverflowSolutionProvider;
 
 final class StackOverflowSolutionProviderTest extends TestCase
 {
@@ -152,7 +151,7 @@ final class StackOverflowSolutionProviderTest extends TestCase
                 'title' => 'question title',
                 'body_markdown' => 'question body',
                 'link' => 'https://stackoverflow.com',
-            ]
+            ],
         ];
 
         $this->assertEquals($questions, $this->callMethod('getQuestionsByResponse', [
@@ -259,7 +258,7 @@ final class StackOverflowSolutionProviderTest extends TestCase
         $this->assertEquals('question title', $solution->getSolutionTitle());
         $this->assertEquals('question body', $solution->getSolutionDescription());
         $this->assertEquals([
-            'question title' => 'https://stackoverflow.com'
+            'question title' => 'https://stackoverflow.com',
         ], $solution->getDocumentationLinks());
     }
 
@@ -281,7 +280,7 @@ final class StackOverflowSolutionProviderTest extends TestCase
         $this->assertEquals('question "title"', $solution->getSolutionTitle());
         $this->assertEquals('Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. ...', $solution->getSolutionDescription());
         $this->assertEquals([
-            'question "title"' => 'https://stackoverflow.com'
+            'question "title"' => 'https://stackoverflow.com',
         ], $solution->getDocumentationLinks());
     }
 

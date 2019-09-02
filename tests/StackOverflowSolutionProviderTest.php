@@ -107,7 +107,7 @@ final class StackOverflowSolutionProviderTest extends TestCase
     public function it_will_return_null_on_timeout(): void
     {
         $this->assertNull($this->callMethod('getResponse', [
-            'https://reqres.in/api/users?delay=1',
+            'https://reqres.in/api/users?delay=2',
         ]));
     }
 

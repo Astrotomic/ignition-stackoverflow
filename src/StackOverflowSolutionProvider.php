@@ -74,8 +74,8 @@ class StackOverflowSolutionProvider implements HasSolutionsForThrowable
 
         curl_setopt($curl, CURLOPT_ENCODING, 'gzip');
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($curl, CURLOPT_CONNECTTIMEOUT_MS, 250);
-        curl_setopt($curl, CURLOPT_TIMEOUT_MS, 750);
+        curl_setopt($curl, CURLOPT_CONNECTTIMEOUT_MS, 500);
+        curl_setopt($curl, CURLOPT_TIMEOUT_MS, 1000);
 
         $response = curl_exec($curl);
 

@@ -2,6 +2,10 @@
 
 All notable changes to `ignition-stackoverflow` will be documented in this file
 
+## 1.3.0 - 2019-09-02
+
+- add `StackOverflowSolutionProvider` to show a nice solution card for the top 5 answered questions
+
 ## 1.2.0 - 2019-09-01
 
 - update styling

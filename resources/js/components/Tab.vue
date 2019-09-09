@@ -4,7 +4,12 @@
 
             <div class="my-2">
                 <div class="flex mb-1">
-                    <input type="search" class="mr-3 p-2 block flex-grow rounded border-b-2 border-gray-400 bg-gray-100 focus:border-orange-500 hover:border-orange-400" v-model.trim="query" v-on:change="newSearch" />
+                    <select class="inline-block mr-3 p-2 rounded border-b-2 border-gray-400 bg-gray-100 focus:border-orange-500 hover:border-orange-400" v-model="site" v-on:change="newSearch">
+                        <option value="stackoverflow">stackoverflow.com</option>
+                        <option value="pt.stackoverflow">pt.stackoverflow.com</option>
+                    </select>
+
+                    <input type="search" class="block flex-grow mr-3 p-2 rounded border-b-2 border-gray-400 bg-gray-100 focus:border-orange-500 hover:border-orange-400" v-model.trim="query" v-on:change="newSearch" />
 
                     <a :href="url" target="_blank" class="inline-block p-2 rounded border-b-2 border-orange-400 hover:border-orange-800 bg-orange-100 hover:text-white hover:bg-orange-500">
                         <i class="fab fa-stack-overflow mr-1"></i>
@@ -103,6 +108,7 @@
         data () {
             return {
                 page: 1,
+                site: 'stackoverflow',
                 has_next: false,
                 is_loading: false,
                 query: '[laravel]['+this.report.language.toLowerCase()+'] ' + this.report.message,
@@ -114,7 +120,7 @@
         },
         computed: {
             url: function () {
-                return 'https://stackoverflow.com/search?q=' + encodeURIComponent(this.query);
+                return 'https://'+this.site+'.com/search?q=' + encodeURIComponent(this.query);
             }
         },
         methods: {
@@ -142,7 +148,7 @@
 
                 this.is_loading = true;
                 axios
-                    .get('https://api.stackexchange.com/2.2/search/advanced?&pagesize=10&order=desc&sort=relevance&site=stackoverflow&answers=1&page='+this.page+'&q='+encodeURIComponent(this.query))
+                    .get('https://api.stackexchange.com/2.2/search/advanced?&pagesize=10&order=desc&sort=relevance&site='+this.site+'&answers=1&page='+this.page+'&q='+encodeURIComponent(this.query))
                     .then(response => {
                         this.questions = response.data.items;
                         this.is_loading = false;

@@ -1,3 +1,12 @@
-const mix = require('laravel-mix')
+const mix = require('laravel-mix');
+require('laravel-mix-purgecss');
 
-mix.js('resources/js/tab.js', 'dist/js');
+mix
+    .setPublicPath('dist')
+    .js('resources/js/tab.js', '')
+    .sass('resources/sass/tab.scss', '')
+    .options({
+        processCssUrls: false,
+    })
+    .purgeCss()
+;

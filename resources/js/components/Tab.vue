@@ -1,5 +1,5 @@
 <template>
-    <div class="tab-content">
+    <div id="astrotomic-stackoverflow-tab" class="tab-content">
         <div class="layout-col py-2">
 
             <div class="my-2">
@@ -154,5 +154,4 @@
 </script>
 
 <style scoped>
-    @import "../../../node_modules/tailwindcss/dist/utilities.css";
 </style>

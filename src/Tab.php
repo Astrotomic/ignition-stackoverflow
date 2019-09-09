@@ -18,6 +18,7 @@ class Tab extends BaseTab
 
     public function registerAssets(): void
     {
-        $this->script($this->component(), __DIR__.'/../dist/js/tab.js');
+        $this->script($this->component(), __DIR__.'/../dist/tab.js');
+        $this->style($this->component(), __DIR__.'/../dist/tab.css');
     }
 }

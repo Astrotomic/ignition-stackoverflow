@@ -28,14 +28,15 @@ final class TabTest extends TestCase
         $tab = new Tab();
 
         $this->assertArrayHasKey('ignition-stackoverflow', $tab->scripts);
-        $this->assertStringEndsWith('dist/js/tab.js', $tab->scripts['ignition-stackoverflow']);
+        $this->assertStringEndsWith('dist/tab.js', $tab->scripts['ignition-stackoverflow']);
     }
 
     /** @test */
-    public function it_has_no_styles(): void
+    public function it_has_the_correct_styles(): void
     {
         $tab = new Tab();
 
-        $this->assertEmpty($tab->styles);
+        $this->assertArrayHasKey('ignition-stackoverflow', $tab->styles);
+        $this->assertStringEndsWith('dist/tab.css', $tab->styles['ignition-stackoverflow']);
     }
 }

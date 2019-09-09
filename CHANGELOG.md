@@ -2,6 +2,11 @@
 
 All notable changes to `ignition-stackoverflow` will be documented in this file
 
+## 1.4.0 - 2019-09-09
+
+- reduce file sizes
+- add site select field
+
 ## 1.3.0 - 2019-09-02
 
 - add `StackOverflowSolutionProvider` to show a nice solution card for the top 5 answered questions

@@ -18,7 +18,7 @@ This package adds a tab to your ignition screen which shows matching StackOverfl
 You can install the package in to a Laravel app that uses [Ignition](https://github.com/facade/ignition) via composer:
 
 ```bash
-composer require astrotomic/ignition-stackoverflow
+composer require astrotomic/ignition-stackoverflow --dev
 ```
 
 ## Usage

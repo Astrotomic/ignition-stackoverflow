@@ -6,15 +6,16 @@
         "flare",
         "ignition"
     ],
-    "homepage": "https://github.com/astrotomic/ignition-stackoverflow",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Tom Witkowski",
-            "email": "dev.gummibeer@gmail.com",
-            "role": "Developer"
-        }
-    ],
+  "homepage": "https://astrotomic.info",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tom Witkowski",
+      "email": "gummibeer@astrotomic.info",
+      "homepage": "https://gummibeer.de",
+      "role": "Developer"
+    }
+  ],
     "require": {
         "php": ">=7.2.0",
         "ext-curl": "*",
@@ -51,5 +52,11 @@
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html=build"
     },
-    "prefer-stable": true
+    "prefer-stable": true,
+   
+  "support": {
+    "email": "dev@astrotomic.info",
+    "issues": "https://github.com/Astrotomic/ignition-stackoverflow/issues",
+    "source": "https://github.com/Astrotomic/ignition-stackoverflow"
+  }
 }

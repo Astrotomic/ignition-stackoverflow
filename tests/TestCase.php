@@ -2,9 +2,9 @@
 
 namespace Astrotomic\IgnitionStackOverflowTab\Tests;
 
+use Astrotomic\IgnitionStackOverflowTab\TabServiceProvider;
 use Facade\Ignition\IgnitionServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
-use Astrotomic\IgnitionStackOverflowTab\TabServiceProvider;
 
 abstract class TestCase extends Orchestra
 {

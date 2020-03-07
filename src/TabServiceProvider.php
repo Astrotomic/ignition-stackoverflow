@@ -3,8 +3,8 @@
 namespace Astrotomic\IgnitionStackOverflowTab;
 
 use Facade\Ignition\Ignition;
-use Illuminate\Support\ServiceProvider;
 use Facade\IgnitionContracts\SolutionProviderRepository as SolutionProviderRepositoryContract;
+use Illuminate\Support\ServiceProvider;
 
 class TabServiceProvider extends ServiceProvider
 {

@@ -2,13 +2,13 @@
 
 namespace Astrotomic\IgnitionStackOverflowTab\Tests;
 
+use Astrotomic\IgnitionStackOverflowTab\StackOverflowSolutionProvider;
 use Exception;
-use Throwable;
-use ReflectionClass;
 use Facade\IgnitionContracts\BaseSolution;
 use PHPUnit\Framework\MockObject\MockObject;
+use ReflectionClass;
 use Symfony\Component\Routing\Exception\RouteNotFoundException;
-use Astrotomic\IgnitionStackOverflowTab\StackOverflowSolutionProvider;
+use Throwable;
 
 final class StackOverflowSolutionProviderTest extends TestCase
 {

@@ -3,10 +3,10 @@
 namespace Astrotomic\IgnitionStackOverflowTab;
 
 use Exception;
-use Throwable;
-use Illuminate\Support\Str;
 use Facade\IgnitionContracts\BaseSolution;
 use Facade\IgnitionContracts\HasSolutionsForThrowable;
+use Illuminate\Support\Str;
+use Throwable;
 
 class StackOverflowSolutionProvider implements HasSolutionsForThrowable
 {

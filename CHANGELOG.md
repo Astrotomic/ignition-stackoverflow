@@ -2,6 +2,10 @@
 
 All notable changes to `ignition-stackoverflow` will be documented in this file
 
+## 1.5.0 - 2020-03-07
+
+- add Laravel 7 support
+
 ## 1.4.0 - 2019-09-09
 
 - reduce file sizes

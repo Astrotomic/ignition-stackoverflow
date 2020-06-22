@@ -1,5 +1,3 @@
-
-
 # Laravel Ignition StackOverflow Tab
 
 ## A tab that fetches stackoverflow questions

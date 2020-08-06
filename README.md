@@ -3,7 +3,7 @@
 ## A tab that fetches stackoverflow questions
 
 [![Latest Version](http://img.shields.io/packagist/v/astrotomic/ignition-stackoverflow.svg?label=Release&style=for-the-badge)](https://packagist.org/packages/astrotomic/ignition-stackoverflow)
-[![MIT License](https://img.shields.io/github/license/Astrotomic/ignition-stackoverflow.svg?label=License&color=blue&style=for-the-badge)](https://github.com/Astrotomic/ignition-stackoverflow/blob/master/LICENSE)
+[![MIT License](https://img.shields.io/github/license/Astrotomic/ignition-stackoverflow.svg?label=License&color=blue&style=for-the-badge)](https://github.com/Astrotomic/ignition-stackoverflow/blob/master/LICENSE.md)
 [![Offset Earth](https://img.shields.io/badge/Treeware-%F0%9F%8C%B3-green?style=for-the-badge)](https://plant.treeware.earth/Astrotomic/ignition-stackoverflow)
 [![Larabelles](https://img.shields.io/badge/Larabelles-%F0%9F%A6%84-lightpink?style=for-the-badge)](https://www.larabelles.com/)
 

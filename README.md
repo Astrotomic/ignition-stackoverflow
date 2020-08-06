@@ -47,7 +47,7 @@ If you discover any security related issues, please check [SECURITY](https://git
 
 ## Credits
 
-- [Tom Witkowski](https://github.com/Gummibeer)
+-   [Tom Witkowski](https://github.com/Gummibeer)
 
 ## License
 

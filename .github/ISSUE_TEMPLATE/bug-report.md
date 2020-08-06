@@ -1,10 +1,9 @@
 ---
 name: "\U0001F41E Bug report"
 about: Create a bug report to help us improve
-title: ''
+title: ""
 labels: bug
-assignees: ''
-
+assignees: ""
 ---
 
 **Describe the bug**
@@ -21,10 +20,11 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Versions (please complete the following information)**
-- PHP: 
-- Database: 
-- Laravel: 
-- Package: 
+
+-   PHP:
+-   Database:
+-   Laravel:
+-   Package:
 
 **Additional context**
 Add any other context about the problem here.

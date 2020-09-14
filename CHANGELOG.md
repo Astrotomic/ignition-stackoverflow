@@ -4,7 +4,7 @@ All notable changes to `ignition-stackoverflow` will be documented in this file
 
 ## 1.6.0 - 2020-09-14
 
-- add Laravel 8 support
+-   add Laravel 8 support
 
 ## 1.5.0 - 2020-03-07
 

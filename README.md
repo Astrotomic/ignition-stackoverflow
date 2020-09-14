@@ -8,7 +8,6 @@
 [![Larabelles](https://img.shields.io/badge/Larabelles-%F0%9F%A6%84-lightpink?style=for-the-badge)](https://www.larabelles.com/)
 
 [![Total Downloads](https://img.shields.io/packagist/dt/astrotomic/ignition-stackoverflow.svg?label=Downloads&style=flat-square&cacheSeconds=600)](https://packagist.org/packages/astrotomic/ignition-stackoverflow)
-[![TravisCI](https://img.shields.io/travis/Astrotomic/ignition-stackoverflow/master.svg?label=TravisCI&style=flat-square&cacheSeconds=600)](https://travis-ci.org/Astrotomic/ignition-stackoverflow)
 [![StyleCI](https://styleci.io/repos/205465094/shield)](https://styleci.io/repos/205465094)
 
 This package adds a tab to your ignition screen which shows matching StackOverflow questions - including a search field.

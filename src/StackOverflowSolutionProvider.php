@@ -96,7 +96,7 @@ class StackOverflowSolutionProvider implements HasSolutionsForThrowable
             $query = get_class($throwable);
         }
 
-        if (strpos($query, base_path()) !== false) {
+        if (Str::contains($query, base_path())) {
             $query = str_replace(base_path(), '', $query);
         }
 

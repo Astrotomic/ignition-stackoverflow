@@ -96,6 +96,10 @@ class StackOverflowSolutionProvider implements HasSolutionsForThrowable
             $query = get_class($throwable);
         }
 
+        if (strpos($query, base_path()) !== false) {
+            $query = str_replace(base_path(), '', $query);
+        }
+
         $query = http_build_query([
             'page' => 1,
             'pagesize' => 5,

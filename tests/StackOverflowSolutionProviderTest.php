@@ -284,6 +284,23 @@ final class StackOverflowSolutionProviderTest extends TestCase
         ], $solution->getDocumentationLinks());
     }
 
+    /** @test */
+    public function it_will_remove_the_basepath_path_from_the_query()
+    {
+        $base_path = base_path();
+
+        $exception_message = "syntax error, unexpected 's' (T_STRING), expecting function (T_FUNCTION) or const (T_CONST) (View: {$base_path}/resources/views/welcome.blade.php)";
+
+        $query = urlencode("syntax error, unexpected 's' (T_STRING), expecting function (T_FUNCTION) or const (T_CONST) (View: /resources/views/welcome.blade.php)");
+
+        $this->assertEquals(
+            "https://api.stackexchange.com/2.2/search/advanced?page=1&pagesize=5&order=desc&sort=relevance&site=stackoverflow&accepted=True&filter=!9YdnSJ*_T&q={$query}",
+            $this->callMethod('getUrl', [
+                new Exception($exception_message),
+            ])
+        );
+    }
+
     protected function callMethod(string $method, array $args)
     {
         $class = new ReflectionClass(StackOverflowSolutionProvider::class);

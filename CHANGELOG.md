@@ -5,7 +5,7 @@ All notable changes to `ignition-stackoverflow` will be documented in this file
 ## 1.7.0 - 2021-02-05
 
 -   add explicit PHP 8.0 support
-- remove `base_path()` from search query - [#20](https://github.com/Astrotomic/ignition-stackoverflow/pull/20)
+-   remove `base_path()` from search query - [#20](https://github.com/Astrotomic/ignition-stackoverflow/pull/20)
 
 ## 1.6.0 - 2020-09-14
 

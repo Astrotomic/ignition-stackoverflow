@@ -1,0 +1,27 @@
+version: 2
+updates:
+- package-ecosystem: composer
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: tailwindcss
+    versions:
+    - 2.0.3
+    - 2.0.4
+    - 2.1.1
+  - dependency-name: axios
+    versions:
+    - 0.21.1
+  - dependency-name: cross-env
+    versions:
+    - 7.0.3
+  - dependency-name: prettier
+    versions:
+    - 2.2.1

@@ -11,7 +11,7 @@
         "format": "prettier --single-quote --write 'resources/**/*.{css,js,vue}'"
     },
     "devDependencies": {
-        "cross-env": "^5.0.0",
+        "cross-env": "^7.0.2",
         "laravel-mix": "^2.0",
         "laravel-mix-purgecss": "^1.0",
         "prettier": "^1.14.0"

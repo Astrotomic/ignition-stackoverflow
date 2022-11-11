@@ -19,7 +19,7 @@
     "dependencies": {
         "axios": "^0.19.0",
         "tailwindcss": "^1.1.2",
-        "vue": "^2.5.0",
+        "vue": "^3.2.45",
         "vue-moment": "^4.0.0"
     }
 }
